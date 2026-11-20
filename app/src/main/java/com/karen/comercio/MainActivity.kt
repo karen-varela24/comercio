@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.karen.comercio.screens.Home
 import com.karen.comercio.ui.theme.ComercioTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,8 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComercioTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    Home(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -30,18 +30,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Preview(showBackground = true, widthDp = 1100, heightDp = 680)
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ComercioTheme {
-        Greeting("Android")
+private fun HomePreview(){
+    ComercioTheme() {
+        Home()
     }
 }

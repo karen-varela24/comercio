@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.karen.comercio.screens.Home
+import com.karen.comercio.screens.Inventario
 import com.karen.comercio.ui.theme.ComercioTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,6 +23,9 @@ class MainActivity : ComponentActivity() {
             ComercioTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Home(
+                        modifier = Modifier.padding(innerPadding)
+                    )
+                    Inventario(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
